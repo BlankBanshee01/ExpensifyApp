@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => (
-  <div>
+  <header>
     <h1>Expensify</h1>
     <NavLink activeClassName="active-link" exact to="/">
       Home
@@ -10,10 +10,7 @@ const Header = () => (
     <NavLink activeClassName="active-link" to="/add_expense">
       Create Expence
     </NavLink>
-    <NavLink activeClassName="active-link" to="/help">
-      Help
-    </NavLink>
-  </div>
+  </header>
 );
 
 export default Header;
