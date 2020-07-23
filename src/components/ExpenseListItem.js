@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const expenseListItem = ({ description, amount, createdAt, id }) => {
+const expenseListItem = ({ description, amount, createdAt, id, note }) => {
   return (
     <div>
       <Link to={`/edit/${id}`}>
@@ -9,6 +9,7 @@ const expenseListItem = ({ description, amount, createdAt, id }) => {
       </Link>
       <p>Amount: {amount}</p>
       <p>Date: {createdAt}</p>
+      <p>Note: {note}</p>
     </div>
   );
 };
