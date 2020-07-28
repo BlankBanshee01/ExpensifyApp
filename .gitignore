@@ -1,5 +1,7 @@
-#build folder
-build
+#folders to ignore
+build/
+playground/
+
 
 # Logs
 logs
