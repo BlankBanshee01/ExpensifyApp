@@ -5,9 +5,8 @@ import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import Routes from "./routers/router";
 import configureStore from "./store/configureStore";
-import { addExpense } from "./actions/expenses";
 import "react-dates/lib/css/_datepicker.css";
-
+import "./firebase/firebase";
 const store = configureStore();
 
 // const state = store.getState();

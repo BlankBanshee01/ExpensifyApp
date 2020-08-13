@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render expense summary with  expense {S} 1`] = `
-<div>
-  <h3>
-    Showing a total of 
-    3
-     
-    expenses
-     totaling
-     
-    $0.20
-  </h3>
-</div>
-`;
-
 exports[`should render expense summary with 1 expense 1`] = `
 <div>
   <h3>
