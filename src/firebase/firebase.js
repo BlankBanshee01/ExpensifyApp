@@ -1,4 +1,5 @@
 import * as firebase from "firebase";
+import runtimeEnv from "@mars/heroku-js-runtime-env";
 
 const env = runtimeEnv();
 
