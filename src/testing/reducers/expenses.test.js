@@ -58,3 +58,15 @@ test("tetsing edit expense", () => {
   });
   expect(rtrn).toEqual(toExpect);
 });
+
+test("should set expenses", () => {
+  const state = {
+    id: "99",
+    description: "to replace",
+    note: "",
+    amount: 77,
+    createdAt: 0,
+  };
+  const rtrn = expensesReducer(state, { type: "SET_EXPENSES", expenses });
+  expect(rtrn).toEqual(expenses);
+});
