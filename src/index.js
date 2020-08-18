@@ -1,3 +1,5 @@
+import "react-app-polyfill/ie9";
+import "react-app-polyfill/stable";
 import React from "react";
 import reactDom from "react-dom";
 import { Provider } from "react-redux";
@@ -6,9 +8,10 @@ import "./styles/styles.scss";
 import Routes, { history } from "./routers/router";
 import configureStore from "./store/configureStore";
 import "react-dates/lib/css/_datepicker.css";
+import { firebase } from "./firebase/firebase";
 import { startSetExpenses } from "./actions/expenses";
 import { login, logout } from "./actions/auth";
-import { firebase } from "./firebase/firebase";
+import LoadingPage from "./components/LoadingPage";
 
 const store = configureStore();
 
@@ -26,7 +29,7 @@ const renderApp = () => {
   }
 };
 
-reactDom.render(<p>Loading...</p>, document.getElementById("root"));
+reactDom.render(<LoadingPage />, document.getElementById("root"));
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
