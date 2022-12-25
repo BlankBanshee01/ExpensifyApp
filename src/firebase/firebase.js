@@ -1,17 +1,14 @@
 import * as firebase from "firebase";
-import runtimeEnv from "@mars/heroku-js-runtime-env";
-
-const env = runtimeEnv();
 
 const firebaseConfig = {
-  apiKey: env.REACT_APP_EXPENSIFY_APIKEY,
-  authDomain: env.REACT_APP_EXPENSIFY_AUTH_DOMAIN,
-  databaseURL: env.REACT_APP_EXPENSIFY_DATABASE_URL,
-  projectId: env.REACT_APP_EXPENSIFY_PROJECT_ID,
-  storageBucket: env.REACT_APP_EXPENSIFY_STORAGE_BUCKET,
-  messagingSenderId: env.REACT_APP_EXPENSIFY_MESSAGING_SENDER_ID,
-  appId: env.REACT_APP_EXPENSIFY_ID,
-  measurementId: env.REACT_APP_EXPENSIFY_MEASUREMENT_ID,
+  apiKey: process.env.REACT_APP_EXPENSIFY_APIKEY,
+  authDomain: process.env.REACT_APP_EXPENSIFY_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_EXPENSIFY_DATABASE_URL,
+  projectId: process.env.REACT_APP_EXPENSIFY_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_EXPENSIFY_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_EXPENSIFY_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_EXPENSIFY_ID,
+  measurementId: process.env.REACT_APP_EXPENSIFY_MEASUREMENT_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
